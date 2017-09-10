@@ -1,0 +1,39 @@
+$tablet: 800px;
+$tablet-sm: 650px;
+$phone-lg: 440px;
+$phone-md: 380px;
+$phone-sm: 330px;
+
+$tablet-landscape: 1050px;
+$phone-lg-landscape: 850px;
+$phone-md-landscape: 700px;
+$phone-sm-landscape: 600px;
+html, body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  
+  overflow-x: hidden;
+  @media screen
+  and (max-width: $tablet) {
+    font-size: 14px;
+  }
+  @media screen
+  and (max-width: $phone-lg) {
+    font-size: 12px;
+  }
+  @media screen
+  and (max-width: $phone-md) {
+    font-size: 10px;
+  }
+  @media screen
+  and (max-width: $phone-sm) {
+    font-size: 8px;
+  }
+}
+body{
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%); 
+}
