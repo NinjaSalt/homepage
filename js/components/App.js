@@ -7,14 +7,19 @@ import {
 
 import AddPerson from '../containers/AddPerson'
 import HomeContainer from '../containers/HomeContainer'
-import HeaderContainer from '../containers/HomeContainer'
+import HeaderContainer from '../containers/HeaderContainer'
 import ActiveListContainer from '../containers/ActiveListContainer'
 
 const App = () => (
-  <div>
-  	<HeaderContainer />
-  	<HomeContainer />
-  </div>
+  <Router>
+	<div>
+	  <HeaderContainer />
+	  <Route exact path="/" component={HomeContainer}/>
+      <Route path="/about" component={ActiveListContainer}/>
+      <Route path="/topics" component={ActiveListContainer}/>
+	 
+  	</div>
+  </Router>
 )
 
 export default App
