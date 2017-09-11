@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux'
-import persons from './persons'
-import actives from './actives'
+import name from './name'
 
-const aboutUsApp = combineReducers({
-  persons,
-  actives
+const homepageApp = combineReducers({
+  name
 })
 
-export default aboutUsApp
+export default homepageApp

@@ -6,18 +6,20 @@ import {
 } from 'react-router-dom'
 
 import AddPerson from '../containers/AddPerson'
-import HomeContainer from '../containers/HomeContainer'
 import HeaderContainer from '../containers/HeaderContainer'
+import HomeContainer from '../containers/HomeContainer'
+import ProjectsContainer from '../containers/ProjectsContainer'
+import AboutMeContainer from '../containers/AboutMeContainer'
 import ActiveListContainer from '../containers/ActiveListContainer'
 
 const App = () => (
   <Router>
 	<div>
-	  <HeaderContainer />
+	  
 	  <Route exact path="/" component={HomeContainer}/>
-      <Route path="/about" component={ActiveListContainer}/>
-      <Route path="/topics" component={ActiveListContainer}/>
-	 
+      <Route path="/projects" component={ProjectsContainer}/>
+      <Route path="/aboutme" component={AboutMeContainer}/>
+	  <HeaderContainer />
   	</div>
   </Router>
 )

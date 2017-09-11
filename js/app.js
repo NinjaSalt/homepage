@@ -2,17 +2,14 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import aboutUsApp from './reducers'
+import homepageApp from './reducers'
 import App from './components/App'
-import data from './data'
 
-console.log(data);
 const initialState = { 
-  actives: data.actives,
-  persons: data.persons
+  name: "John Salter"
 };
 
-let store = createStore(aboutUsApp, initialState)
+let store = createStore(homepageApp, initialState)
 
 
 render(

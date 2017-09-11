@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
 import { removePerson } from '../actions'
-import Home from '../components/Home'
+import AboutMe from '../components/AboutMe'
 
 const mapStateToProps = state => {
   return {
-    name: state.name
+    
   }
 }
 
@@ -14,9 +14,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const HomeContainer = connect(
+const AboutMeContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(AboutMe)
 
-export default HomeContainer
+export default AboutMeContainer
