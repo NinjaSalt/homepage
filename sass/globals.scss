@@ -35,5 +35,23 @@ html, body{
   }
 }
 body{
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%); 
+  background: radial-gradient(white, #c5c5c5);
+}
+
+.persons-enter {
+  position: absolute;
+}
+    
+
+.persons-enter.persons-enter-active {
+  position: absolute;
+}
+
+.persons-leave {
+  opacity: 0!important;
+  
+}
+
+.persons-leave.actives-leave-active {
+  opacity: 0!important;
 }

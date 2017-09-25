@@ -4,6 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import AddPerson from '../containers/AddPerson'
 import HeaderContainer from '../containers/HeaderContainer'
@@ -15,12 +16,17 @@ import ActiveListContainer from '../containers/ActiveListContainer'
 const App = () => (
   <Router>
 	<div>
-	  
-	  <Route exact path="/" component={HomeContainer}/>
-      <Route path="/projects" component={ProjectsContainer}/>
-      <Route path="/aboutme" component={AboutMeContainer}/>
-	  <HeaderContainer />
+		<ReactCSSTransitionGroup
+            transitionName="persons"
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={1000}>
+		  <Route exact path="/" component={HomeContainer}/>
+	      <Route path="/projects" component={ProjectsContainer}/>
+	      <Route path="/aboutme" component={AboutMeContainer}/>
+        </ReactCSSTransitionGroup>
+        <HeaderContainer />
   	</div>
+  	
   </Router>
 )
 
